@@ -1,25 +1,26 @@
 +++
-title = "About"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "Hugo Authors"
+title = "About me"
+description = "A glimpse into my journey, interests, and aspirations"
+date = "2024-12-27"
+aliases = ["about-me", "about-profile", "contact"]
+author = "Your Name"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+# Giới thiệu chung
+Xin chào! Tôi là Nguyễn Văn Sang,là sinh viên sắp tốt nghiệp và có thể sẽ thất nghiệp của trường Đại Học Công nghệ Tp.HCM
 
-Hugo makes use of a variety of open source projects including:
+Blog này chính là nơi tôi ghi lại hành trình học tập, kinh nghiệm làm việc, và những điều tôi khám phá trong thế giới lập trình. Hy vọng bạn sẽ tìm thấy những thông tin hữu ích và thú vị tại đây!
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+# Niềm đam mê
+Ngoài việc học lập trình và lập trình, tôi còn rất thích chơi game và đọc tiểu thuyết mạng
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
 
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
+# Blog này hướng đến điều gì?
+ Tôi làm Blog này là để giới thiệu bản thân và chia sẻ kiến thức cá nhân về Java và JavaScript
 
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+# Kết nối với tôi
+Nếu bạn muốn kết nối với tôi hãy ghe qua [Trang chủ](/) hoặc [Liên hệ](/contact/) hoặc Riot ID: shiba chao nima#1802     
+
+
+---

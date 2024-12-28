@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Development on Sang Nguyễn</title>
+    <link>http://localhost:1313/tags/web-development/</link>
+    <description>Recent content in Web Development on Sang Nguyễn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 27 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Các Framework của JavaScript</title>
+      <link>http://localhost:1313/posts/javascript-new2/</link>
+      <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/javascript-new2/</guid>
+      <description>&lt;h1 id=&#34;các-framework-javascript-phổ-biến&#34;&gt;&#xD;&#xA;  Các Framework JavaScript Phổ Biến&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#c%c3%a1c-framework-javascript-ph%e1%bb%95-bi%e1%ba%bfn&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;JavaScript là ngôn ngữ rất mạnh mẽ với nhiều ứng dụng trong phát triển web, và các framework JavaScript là công cụ quan trọng giúp các lập trình viên xây dựng ứng dụng web một cách nhanh chóng và dễ dàng hơn. Các framework này cung cấp những công cụ sẵn có, giúp bạn giảm thiểu việc phải viết mã từ đầu. Dưới đây là những framework JavaScript phổ biến hiện nay, giúp bạn hiểu rõ hơn về mỗi cái và cách sử dụng chúng.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Giới Thiệu Về Node.js</title>
+      <link>http://localhost:1313/posts/javascript3-new/</link>
+      <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/javascript3-new/</guid>
+      <description>&lt;h1 id=&#34;giới-thiệu-về-nodejs&#34;&gt;&#xD;&#xA;  Giới Thiệu Về Node.js&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-nodejs&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Node.js là một môi trường chạy mã JavaScript trên server, cho phép lập trình viên sử dụng JavaScript không chỉ trong trình duyệt mà còn trong backend. Với Node.js, bạn có thể xây dựng các ứng dụng web nhanh chóng, xử lý các yêu cầu HTTP, và kết nối với cơ sở dữ liệu, tất cả bằng JavaScript.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ngôn ngữ lập trình không thể thiếu trong phát triển web</title>
+      <link>http://localhost:1313/posts/javascript-new/</link>
+      <pubDate>Fri, 27 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/javascript-new/</guid>
+      <description>&lt;h3 id=&#34;javascript-ngôn-ngữ-lập-trình-không-thể-thiếu-trong-phát-triển-web&#34;&gt;&#xD;&#xA;  &lt;strong&gt;JavaScript: Ngôn ngữ lập trình không thể thiếu trong phát triển web&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#javascript-ng%c3%b4n-ng%e1%bb%af-l%e1%ba%adp-tr%c3%acnh-kh%c3%b4ng-th%e1%bb%83-thi%e1%ba%bfu-trong-ph%c3%a1t-tri%e1%bb%83n-web&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Trong thế giới lập trình hiện đại, JavaScript là một trong những ngôn ngữ quan trọng nhất mà mọi lập trình viên web đều phải biết. Được sử dụng rộng rãi để xây dựng các ứng dụng web động và tương tác, JavaScript đã thay đổi cách mà chúng ta tương tác với các trang web.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

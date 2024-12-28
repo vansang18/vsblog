@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Các Kỹ Thuật Phổ Biến Trong Java · Sang Nguyễn
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sang Nguyễn">
+<meta name="description" content="Khám phá các ký thuật phổ biên trong Java">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Các Kỹ Thuật Phổ Biến Trong Java">
+  <meta name="twitter:description" content="Khám phá các ký thuật phổ biên trong Java">
+
+<meta property="og:url" content="http://localhost:1313/posts/java-new6/">
+  <meta property="og:site_name" content="Sang Nguyễn">
+  <meta property="og:title" content="Các Kỹ Thuật Phổ Biến Trong Java">
+  <meta property="og:description" content="Khám phá các ký thuật phổ biên trong Java">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/java-new6/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sang Nguyễn
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/java-new6/">
+              Các Kỹ Thuật Phổ Biến Trong Java
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-12-26T00:00:00Z">
+                December 26, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/java/">Java</a>
+      <span class="separator">•</span>
+    <a href="/categories/c%C3%B4ng-c%E1%BB%A5/">Công Cụ</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="các-kỹ-thuật-phổ-biến-trong-java">
+  Các Kỹ Thuật Phổ Biến Trong Java
+  <a class="heading-link" href="#c%c3%a1c-k%e1%bb%b9-thu%e1%ba%adt-ph%e1%bb%95-bi%e1%ba%bfn-trong-java">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Java là một ngôn ngữ lập trình mạnh mẽ và linh hoạt, được sử dụng rộng rãi trong phát triển phần mềm, từ các ứng dụng di động đến các ứng dụng web phức tạp. Dưới đây là những kỹ thuật quan trọng mà lập trình viên Java thường sử dụng để xây dựng các ứng dụng hiệu quả và dễ bảo trì.</p>
+<hr>
+<h2 id="1-lập-trình-hướng-đối-tượng-oop">
+  1. <strong>Lập Trình Hướng Đối Tượng (OOP)</strong>
+  <a class="heading-link" href="#1-l%e1%ba%adp-tr%c3%acnh-h%c6%b0%e1%bb%9bng-%c4%91%e1%bb%91i-t%c6%b0%e1%bb%a3ng-oop">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Lập trình hướng đối tượng (OOP) là một trong những đặc điểm nổi bật của Java. OOP giúp tổ chức mã nguồn thành các đối tượng với các thuộc tính và phương thức, giúp mã nguồn dễ quản lý và bảo trì.</p>
+<h3 id="các-nguyên-lý-của-oop">
+  Các nguyên lý của OOP:
+  <a class="heading-link" href="#c%c3%a1c-nguy%c3%aan-l%c3%bd-c%e1%bb%a7a-oop">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Encapsulation (Đóng gói)</strong>: Là việc ẩn các chi tiết nội bộ của đối tượng và chỉ cung cấp các phương thức công cộng để truy cập và thay đổi dữ liệu.</li>
+<li><strong>Inheritance (Kế thừa)</strong>: Cho phép tạo ra các lớp mới từ các lớp đã có, tái sử dụng mã nguồn và mở rộng chức năng của lớp cha.</li>
+<li><strong>Polymorphism (Đa hình)</strong>: Cho phép các đối tượng khác nhau có thể có hành vi khác nhau khi gọi cùng một phương thức.</li>
+<li><strong>Abstraction (Trừu tượng)</strong>: Là việc ẩn đi các chi tiết triển khai và chỉ cung cấp các giao diện cần thiết cho người dùng.</li>
+</ul>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Some sound...&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">makeSound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Bark!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">myDog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">myDog</span><span class="p">.</span><span class="na">makeSound</span><span class="p">();</span><span class="w"> </span><span class="c1">// Output: Bark!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="2-xử-lý-ngoại-lệ-exception-handling">
+  2. <strong>Xử Lý Ngoại Lệ (Exception Handling)</strong>
+  <a class="heading-link" href="#2-x%e1%bb%ad-l%c3%bd-ngo%e1%ba%a1i-l%e1%bb%87-exception-handling">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Java cung cấp cơ chế xử lý ngoại lệ để giúp quản lý các lỗi trong chương trình. Bằng cách sử dụng các câu lệnh <code>try</code>, <code>catch</code>, <code>finally</code>, bạn có thể bắt và xử lý các lỗi xảy ra trong quá trình chạy ứng dụng.</p>
+<h3 id="các-loại-ngoại-lệ-trong-java">
+  Các loại ngoại lệ trong Java:
+  <a class="heading-link" href="#c%c3%a1c-lo%e1%ba%a1i-ngo%e1%ba%a1i-l%e1%bb%87-trong-java">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Checked exceptions</strong>: Ngoại lệ được kiểm tra tại thời điểm biên dịch (ví dụ: <code>IOException</code>).</li>
+<li><strong>Unchecked exceptions</strong>: Ngoại lệ không được kiểm tra tại thời điểm biên dịch (ví dụ: <code>NullPointerException</code>).</li>
+</ul>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ArithmeticException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Cannot divide by zero.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;This will always run.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="3-lập-trình-đa-luồng-multithreading">
+  3. <strong>Lập Trình Đa Luồng (Multithreading)</strong>
+  <a class="heading-link" href="#3-l%e1%ba%adp-tr%c3%acnh-%c4%91a-lu%e1%bb%93ng-multithreading">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Lập trình đa luồng cho phép các phần của ứng dụng chạy đồng thời, giúp tăng hiệu suất và tối ưu hóa tài nguyên hệ thống. Java hỗ trợ đa luồng thông qua lớp <code>Thread</code> và giao diện <code>Runnable</code>.</p>
+<h3 id="các-kỹ-thuật-trong-đa-luồng">
+  Các kỹ thuật trong đa luồng:
+  <a class="heading-link" href="#c%c3%a1c-k%e1%bb%b9-thu%e1%ba%adt-trong-%c4%91a-lu%e1%bb%93ng">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Thread synchronization</strong>: Đảm bảo rằng chỉ một luồng có thể truy cập tài nguyên chia sẻ tại một thời điểm.</li>
+<li><strong>Thread communication</strong>: Các luồng có thể giao tiếp với nhau để đồng bộ hóa hoạt động.</li>
+</ul>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Counter</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Thread</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Counter</span><span class="w"> </span><span class="n">thread1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Counter</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Counter</span><span class="w"> </span><span class="n">thread2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Counter</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">thread1</span><span class="p">.</span><span class="na">start</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">thread2</span><span class="p">.</span><span class="na">start</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="4-java-streams-api">
+  4. <strong>Java Streams API</strong>
+  <a class="heading-link" href="#4-java-streams-api">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Java 8 đã giới thiệu Streams API, giúp xử lý tập hợp dữ liệu (như danh sách hoặc mảng) một cách hiệu quả và dễ đọc hơn. Streams cho phép bạn thực hiện các phép toán như lọc, chuyển đổi và tính toán trên dữ liệu mà không thay đổi dữ liệu gốc.</p>
+<h3 id="các-phép-toán-cơ-bản">
+  Các phép toán cơ bản:
+  <a class="heading-link" href="#c%c3%a1c-ph%c3%a9p-to%c3%a1n-c%c6%a1-b%e1%ba%a3n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>filter()</strong>: Lọc các phần tử theo điều kiện.</li>
+<li><strong>map()</strong>: Áp dụng một hàm vào mỗi phần tử của dòng.</li>
+<li><strong>reduce()</strong>: Tổng hợp các phần tử thành một giá trị duy nhất.</li>
+</ul>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.stream.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">4</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">.</span><span class="na">stream</span><span class="p">()</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                         </span><span class="p">.</span><span class="na">filter</span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                         </span><span class="p">.</span><span class="na">mapToInt</span><span class="p">(</span><span class="n">Integer</span><span class="p">::</span><span class="n">intValue</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                         </span><span class="p">.</span><span class="na">sum</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Sum of even numbers: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: 6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="5-sử-dụng-lambda-expressions">
+  5. <strong>Sử Dụng Lambda Expressions</strong>
+  <a class="heading-link" href="#5-s%e1%bb%ad-d%e1%bb%a5ng-lambda-expressions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Lambda expressions là một tính năng trong Java 8, giúp viết mã ngắn gọn và dễ hiểu hơn, đặc biệt là khi làm việc với các biểu thức hàm. Lambda expressions có thể thay thế các lớp vô danh (anonymous classes) và làm cho mã nguồn dễ đọc hơn.</p>
+<p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.*</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&#34;Java&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Python&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;C++&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Sử dụng Lambda để in danh sách</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">list</span><span class="p">.</span><span class="na">forEach</span><span class="p">(</span><span class="n">item</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">item</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="6-quản-lý-bộ-nhớ-memory-management">
+  6. <strong>Quản Lý Bộ Nhớ (Memory Management)</strong>
+  <a class="heading-link" href="#6-qu%e1%ba%a3n-l%c3%bd-b%e1%bb%99-nh%e1%bb%9b-memory-management">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Java sử dụng Garbage Collection (GC) để quản lý bộ nhớ, tự động giải phóng bộ nhớ khi các đối tượng không còn được tham chiếu. Điều này giúp lập trình viên tránh phải quản lý bộ nhớ thủ công như trong các ngôn ngữ khác (ví dụ: C, C++).</p>
+<h3 id="các-thuật-toán-garbage-collection">
+  Các thuật toán Garbage Collection:
+  <a class="heading-link" href="#c%c3%a1c-thu%e1%ba%adt-to%c3%a1n-garbage-collection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Mark-and-sweep</strong>: Đánh dấu các đối tượng không còn được sử dụng và giải phóng bộ nhớ.</li>
+<li><strong>Generational GC</strong>: Phân chia bộ nhớ thành các thế hệ (young, old) để tối ưu hóa việc thu gom rác.</li>
+</ul>
+<hr>
+<h2 id="kết-luận">
+  Kết Luận
+  <a class="heading-link" href="#k%e1%ba%bft-lu%e1%ba%adn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Các kỹ thuật trong Java như lập trình hướng đối tượng, xử lý ngoại lệ, lập trình đa luồng, Java Streams API, Lambda Expressions và quản lý bộ nhớ đều là những công cụ quan trọng giúp lập trình viên Java phát triển các ứng dụng hiệu quả và dễ bảo trì. Việc nắm vững các kỹ thuật này sẽ giúp bạn xây dựng được những ứng dụng mạnh mẽ, linh hoạt và dễ dàng mở rộng trong tương lai.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Sang Nguyễn 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

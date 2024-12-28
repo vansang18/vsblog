@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Các Framework của JavaScript · Sang Nguyễn
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sang Nguyễn">
+<meta name="description" content="Tìm hiểu về JavaScript, một ngôn ngữ lập trình quan trọng trong phát triển web hiện đại.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Các Framework của JavaScript">
+  <meta name="twitter:description" content="Tìm hiểu về JavaScript, một ngôn ngữ lập trình quan trọng trong phát triển web hiện đại.">
+
+<meta property="og:url" content="http://localhost:1313/posts/javascript-new2/">
+  <meta property="og:site_name" content="Sang Nguyễn">
+  <meta property="og:title" content="Các Framework của JavaScript">
+  <meta property="og:description" content="Tìm hiểu về JavaScript, một ngôn ngữ lập trình quan trọng trong phát triển web hiện đại.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-27T00:00:00+00:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="Programming">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/javascript-new2/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sang Nguyễn
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/javascript-new2/">
+              Các Framework của JavaScript
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-12-27T00:00:00Z">
+                December 27, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              6-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/l%E1%BA%ADp-tr%C3%ACnh/">Lập Trình</a>
+      <span class="separator">•</span>
+    <a href="/categories/javascript/">JavaScript</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/javascript/">JavaScript</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/web-development/">Web Development</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/programming/">Programming</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="các-framework-javascript-phổ-biến">
+  Các Framework JavaScript Phổ Biến
+  <a class="heading-link" href="#c%c3%a1c-framework-javascript-ph%e1%bb%95-bi%e1%ba%bfn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>JavaScript là ngôn ngữ rất mạnh mẽ với nhiều ứng dụng trong phát triển web, và các framework JavaScript là công cụ quan trọng giúp các lập trình viên xây dựng ứng dụng web một cách nhanh chóng và dễ dàng hơn. Các framework này cung cấp những công cụ sẵn có, giúp bạn giảm thiểu việc phải viết mã từ đầu. Dưới đây là những framework JavaScript phổ biến hiện nay, giúp bạn hiểu rõ hơn về mỗi cái và cách sử dụng chúng.</p>
+<hr>
+<h2 id="1-reactjs">
+  1. React.js
+  <a class="heading-link" href="#1-reactjs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu">
+  Giới Thiệu
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>React.js là một thư viện (với nhiều người gọi là framework) JavaScript phát triển bởi Facebook, chủ yếu dùng để xây dựng giao diện người dùng. React cho phép phát triển các ứng dụng đơn trang (SPA - Single Page Applications) với tính năng cập nhật giao diện động mà không cần tải lại trang.</p>
+<h3 id="các-đặc-điểm-nổi-bật">
+  Các Đặc Điểm Nổi Bật:
+  <a class="heading-link" href="#c%c3%a1c-%c4%91%e1%ba%b7c-%c4%91i%e1%bb%83m-n%e1%bb%95i-b%e1%ba%adt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Component-based</strong>: React sử dụng các <strong>components</strong> (thành phần) để xây dựng giao diện, giúp tái sử dụng mã và dễ dàng quản lý.</li>
+<li><strong>Virtual DOM</strong>: React sử dụng Virtual DOM để tối ưu hóa hiệu suất khi cập nhật giao diện.</li>
+<li><strong>One-way data binding</strong>: Dữ liệu trong React chỉ có thể đi từ component cha đến component con, giúp dễ dàng quản lý trạng thái ứng dụng.</li>
+<li><strong>Rich Ecosystem</strong>: React có một hệ sinh thái lớn với các thư viện bổ trợ như React Router (quản lý định tuyến), Redux (quản lý trạng thái), và nhiều thư viện khác.</li>
+</ul>
+<h3 id="khi-nào-nên-dùng">
+  Khi Nào Nên Dùng:
+  <a class="heading-link" href="#khi-n%c3%a0o-n%c3%aan-d%c3%b9ng">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>React rất phù hợp cho việc phát triển các ứng dụng web đơn trang với giao diện người dùng phức tạp và cần tương tác cao. Các ứng dụng như Facebook, Instagram, và Airbnb đều sử dụng React.</p>
+<h3 id="ví-dụ-cơ-bản">
+  Ví Dụ Cơ Bản:
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5-c%c6%a1-b%e1%ba%a3n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="p">,</span> <span class="nx">React</span><span class="o">!&lt;</span><span class="err">/h1&gt;;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">App</span><span class="p">;</span>
+</span></span></code></pre></div><hr>
+<h2 id="2-vuejs">
+  2. Vue.js
+  <a class="heading-link" href="#2-vuejs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-1">
+  Giới Thiệu
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Vue.js là một framework JavaScript linh hoạt, dễ học và phát triển ứng dụng web. Vue thường được sử dụng trong các dự án nhỏ đến trung bình, và nổi bật vì tính dễ dàng tích hợp vào dự án hiện có.</p>
+<h3 id="các-đặc-điểm-nổi-bật-1">
+  Các Đặc Điểm Nổi Bật:
+  <a class="heading-link" href="#c%c3%a1c-%c4%91%e1%ba%b7c-%c4%91i%e1%bb%83m-n%e1%bb%95i-b%e1%ba%adt-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Two-way data binding</strong>: Vue hỗ trợ hai chiều binding dữ liệu, giúp dữ liệu giữa model và view luôn đồng bộ.</li>
+<li><strong>Component-based architecture</strong>: Vue cũng sử dụng kiến trúc component giúp việc xây dựng ứng dụng trở nên dễ dàng và tái sử dụng mã nguồn.</li>
+<li><strong>Lightweight</strong>: Vue rất nhẹ, dễ tích hợp vào các dự án hiện có mà không cần thay đổi cấu trúc toàn bộ ứng dụng.</li>
+</ul>
+<h3 id="khi-nào-nên-dùng-1">
+  Khi Nào Nên Dùng:
+  <a class="heading-link" href="#khi-n%c3%a0o-n%c3%aan-d%c3%b9ng-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Vue.js phù hợp cho các dự án vừa và nhỏ, hoặc các dự án cần tích hợp JavaScript vào các ứng dụng hiện có mà không gặp phải quá nhiều khó khăn. Vue cũng thích hợp với những người mới học lập trình vì dễ tiếp cận và có tài liệu hướng dẫn phong phú.</p>
+<h3 id="ví-dụ-cơ-bản-1">
+  Ví Dụ Cơ Bản:
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5-c%c6%a1-b%e1%ba%a3n-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Vue.js Example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/vue@2.6.14&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;app&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">el</span><span class="o">:</span> <span class="s1">&#39;#app&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">message</span><span class="o">:</span> <span class="s1">&#39;Hello, Vue!&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="3-angularjs">
+  3. Angular.js
+  <a class="heading-link" href="#3-angularjs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-2">
+  Giới Thiệu
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Angular.js là một framework JavaScript phát triển bởi Google. Angular là một framework đầy đủ tính năng, được sử dụng để phát triển các ứng dụng web phức tạp với kiến trúc MVC (Model-View-Controller).</p>
+<h3 id="các-đặc-điểm-nổi-bật-2">
+  Các Đặc Điểm Nổi Bật:
+  <a class="heading-link" href="#c%c3%a1c-%c4%91%e1%ba%b7c-%c4%91i%e1%bb%83m-n%e1%bb%95i-b%e1%ba%adt-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Two-way data binding</strong>: Angular hỗ trợ hai chiều binding dữ liệu, giúp cập nhật giao diện khi dữ liệu thay đổi và ngược lại.</li>
+<li><strong>Dependency Injection (DI)</strong>: Angular hỗ trợ DI, giúp dễ dàng quản lý các phụ thuộc trong ứng dụng.</li>
+<li><strong>Directives</strong>: Angular sử dụng các directive để thêm các thuộc tính đặc biệt vào phần tử HTML, giúp cải thiện khả năng tái sử dụng mã.</li>
+</ul>
+<h3 id="khi-nào-nên-dùng-2">
+  Khi Nào Nên Dùng:
+  <a class="heading-link" href="#khi-n%c3%a0o-n%c3%aan-d%c3%b9ng-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Angular phù hợp cho các ứng dụng phức tạp với yêu cầu cao về tính mở rộng và bảo trì. Các ứng dụng như Google, Microsoft Office Online và YouTube sử dụng Angular.</p>
+<h3 id="ví-dụ-cơ-bản-2">
+  Ví Dụ Cơ Bản:
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5-c%c6%a1-b%e1%ba%a3n-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Angular Example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-app</span><span class="o">=</span><span class="s">&#34;myApp&#34;</span> <span class="na">ng-controller</span><span class="o">=</span><span class="s">&#34;myCtrl&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ greeting }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nx">angular</span><span class="p">.</span><span class="nx">module</span><span class="p">(</span><span class="s1">&#39;myApp&#39;</span><span class="p">,</span> <span class="p">[])</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="nx">controller</span><span class="p">(</span><span class="s1">&#39;myCtrl&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">$scope</span><span class="p">.</span><span class="nx">greeting</span> <span class="o">=</span> <span class="s1">&#39;Hello, Angular!&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">});</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><hr>
+<h2 id="4-svelte">
+  4. Svelte
+  <a class="heading-link" href="#4-svelte">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-3">
+  Giới Thiệu
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Svelte là một framework JavaScript tương đối mới, khác biệt so với các framework khác bởi vì nó không sử dụng Virtual DOM. Thay vào đó, Svelte biên dịch các ứng dụng vào mã JavaScript thuần túy và trực tiếp thao tác DOM khi cần thiết.</p>
+<h3 id="các-đặc-điểm-nổi-bật-3">
+  Các Đặc Điểm Nổi Bật:
+  <a class="heading-link" href="#c%c3%a1c-%c4%91%e1%ba%b7c-%c4%91i%e1%bb%83m-n%e1%bb%95i-b%e1%ba%adt-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>No Virtual DOM</strong>: Svelte biên dịch ứng dụng của bạn thành mã JavaScript thuần túy, giúp giảm thiểu overhead so với Virtual DOM.</li>
+<li><strong>Reactivity</strong>: Svelte cung cấp một cách đơn giản và trực quan để làm việc với reactivity mà không cần phải sử dụng các thư viện phụ trợ phức tạp.</li>
+<li><strong>Lightweight</strong>: Vì không sử dụng Virtual DOM và các thư viện phức tạp, Svelte có thể tạo ra mã JavaScript rất nhẹ và hiệu quả.</li>
+</ul>
+<h3 id="khi-nào-nên-dùng-3">
+  Khi Nào Nên Dùng:
+  <a class="heading-link" href="#khi-n%c3%a0o-n%c3%aan-d%c3%b9ng-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Svelte phù hợp cho những ai muốn một framework đơn giản và hiệu quả, đặc biệt khi phát triển các ứng dụng web nhẹ và nhanh chóng.</p>
+<h3 id="ví-dụ-cơ-bản-3">
+  Ví Dụ Cơ Bản:
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5-c%c6%a1-b%e1%ba%a3n-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Svelte Example<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">defer</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;build/bundle.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="kd">let</span> <span class="nx">name</span> <span class="o">=</span> <span class="s1">&#39;Svelte&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hello, {name}!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><hr>
+<h3 id="kết-luận">
+  Kết Luận
+  <a class="heading-link" href="#k%e1%ba%bft-lu%e1%ba%adn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Các framework JavaScript như React, Vue, Angular, và Svelte đều có những đặc điểm nổi bật và phù hợp với các loại dự án khác nhau. Việc lựa chọn framework phụ thuộc vào yêu cầu cụ thể của dự án, kinh nghiệm của đội ngũ phát triển, và những tính năng mà bạn cần xây dựng.</p>
+<ul>
+<li><strong>React</strong>: Lý tưởng cho ứng dụng đơn trang với giao diện người dùng phức tạp.</li>
+<li><strong>Vue</strong>: Thích hợp cho những dự án nhỏ đến trung bình, dễ học và tích hợp.</li>
+<li><strong>Angular</strong>: Tốt cho các ứng dụng web lớn, phức tạp, và yêu cầu tính bảo trì cao.</li>
+<li><strong>Svelte</strong>: Dành cho những ai muốn có một framework nhẹ và hiệu quả, không sử dụng Virtual DOM.</li>
+</ul>
+<p>Hy vọng bài viết này giúp bạn hiểu rõ hơn về các framework JavaScript phổ biến và lựa chọn được công cụ phù hợp cho dự án của mình.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Sang Nguyễn 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

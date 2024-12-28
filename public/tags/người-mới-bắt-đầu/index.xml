@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Người Mới Bắt Đầu on Sang Nguyễn</title>
+    <link>http://localhost:1313/tags/ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/</link>
+    <description>Recent content in Người Mới Bắt Đầu on Sang Nguyễn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Các tính chất của ngôn ngữ Java</title>
+      <link>http://localhost:1313/posts/java-new2/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/java-new2/</guid>
+      <description>&lt;h1 id=&#34;tính-đóng-gói-kế-thừa-trừu-tượng-và-đa-hình-trong-lập-trình-hướng-đối-tượng&#34;&gt;&#xD;&#xA;  Tính Đóng Gói, Kế Thừa, Trừu Tượng, và Đa Hình trong Lập Trình Hướng Đối Tượng&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#t%c3%adnh-%c4%91%c3%b3ng-g%c3%b3i-k%e1%ba%bf-th%e1%bb%aba-tr%e1%bb%abu-t%c6%b0%e1%bb%a3ng-v%c3%a0-%c4%91a-h%c3%acnh-trong-l%e1%ba%adp-tr%c3%acnh-h%c6%b0%e1%bb%9bng-%c4%91%e1%bb%91i-t%c6%b0%e1%bb%a3ng&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Lập trình hướng đối tượng (OOP - Object-Oriented Programming) là một mô hình lập trình phổ biến với bốn nguyên lý cơ bản: &lt;strong&gt;Tính đóng gói&lt;/strong&gt;, &lt;strong&gt;Kế thừa&lt;/strong&gt;, &lt;strong&gt;Trừu tượng&lt;/strong&gt;, và &lt;strong&gt;Đa hình&lt;/strong&gt;. Các nguyên lý này giúp tổ chức mã nguồn một cách logic, dễ bảo trì và tái sử dụng.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cấu Trúc Chương Trình Java: Giới Thiệu Về Lớp, Phương Thức, Và Cách Java Tổ Chức Mã Nguồn</title>
+      <link>http://localhost:1313/posts/java-new3/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/java-new3/</guid>
+      <description>&lt;h1 id=&#34;cấu-trúc-chương-trình-java-giới-thiệu-về-lớp-phương-thức-và-tổ-chức-mã-nguồn&#34;&gt;&#xD;&#xA;  &lt;strong&gt;Cấu trúc Chương trình Java: Giới thiệu về Lớp, Phương thức và Tổ chức Mã nguồn&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#c%e1%ba%a5u-tr%c3%bac-ch%c6%b0%c6%a1ng-tr%c3%acnh-java-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-l%e1%bb%9bp-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-v%c3%a0-t%e1%bb%95-ch%e1%bb%a9c-m%c3%a3-ngu%e1%bb%93n&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Java là một ngôn ngữ lập trình hướng đối tượng, nổi bật với cấu trúc mã nguồn rõ ràng và dễ tổ chức. Hiểu rõ cách Java tổ chức chương trình sẽ giúp bạn viết mã dễ hiểu, dễ bảo trì, và chuẩn mực hơn.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-cấu-trúc-cơ-bản-của-một-chương-trình-java&#34;&gt;&#xD;&#xA;  &lt;strong&gt;1. Cấu trúc cơ bản của một chương trình Java&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-c%e1%ba%a5u-tr%c3%bac-c%c6%a1-b%e1%ba%a3n-c%e1%bb%a7a-m%e1%bb%99t-ch%c6%b0%c6%a1ng-tr%c3%acnh-java&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Một chương trình Java điển hình bao gồm:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tại Sao Java Là Ngôn Ngữ Lập Trình Tuyệt Vời Cho Người Mới Bắt Đầu?</title>
+      <link>http://localhost:1313/posts/java-new/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/java-new/</guid>
+      <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;&#xD;&#xA;  &lt;strong&gt;Giới thiệu&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#gi%e1%bb%9bi-thi%e1%bb%87u&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;p&gt;Java là một trong những ngôn ngữ lập trình phổ biến nhất trên thế giới, được sử dụng rộng rãi trong nhiều lĩnh vực từ phát triển ứng dụng web, ứng dụng di động, đến các hệ thống nhúng. Nhưng điều gì làm cho Java trở thành lựa chọn tuyệt vời cho người mới bắt đầu học lập trình? Hãy cùng tìm hiểu!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

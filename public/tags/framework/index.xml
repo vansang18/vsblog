@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Framework on Sang Nguyễn</title>
+    <link>http://localhost:1313/tags/framework/</link>
+    <description>Recent content in Framework on Sang Nguyễn</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 26 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Các Framework Phổ Biến Trong Java</title>
+      <link>http://localhost:1313/posts/java-new5/</link>
+      <pubDate>Thu, 26 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/java-new5/</guid>
+      <description>&lt;h1 id=&#34;các-framework-phổ-biến-trong-java&#34;&gt;&#xD;&#xA;  &lt;strong&gt;Các Framework Phổ Biến Trong Java&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#c%c3%a1c-framework-ph%e1%bb%95-bi%e1%ba%bfn-trong-java&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;&#xD;&#xA;&lt;p&gt;Framework là một phần không thể thiếu trong lập trình Java hiện đại, giúp tăng tốc phát triển phần mềm và giảm tải công việc lặp đi lặp lại. Dưới đây là các framework phổ biến trong hệ sinh thái Java:&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-spring-framework&#34;&gt;&#xD;&#xA;  &lt;strong&gt;1. Spring Framework&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#1-spring-framework&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;giới-thiệu&#34;&gt;&#xD;&#xA;  &lt;strong&gt;Giới thiệu&lt;/strong&gt;&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#gi%e1%bb%9bi-thi%e1%bb%87u&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Spring là một framework mạnh mẽ và linh hoạt cho phát triển ứng dụng Java.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

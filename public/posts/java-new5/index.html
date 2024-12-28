@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Các Framework Phổ Biến Trong Java · Sang Nguyễn
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sang Nguyễn">
+<meta name="description" content="Khám phá các framework phổ biến trong hệ sinh thái Java như Spring, Hibernate và nhiều hơn nữa.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Các Framework Phổ Biến Trong Java">
+  <meta name="twitter:description" content="Khám phá các framework phổ biến trong hệ sinh thái Java như Spring, Hibernate và nhiều hơn nữa.">
+
+<meta property="og:url" content="http://localhost:1313/posts/java-new5/">
+  <meta property="og:site_name" content="Sang Nguyễn">
+  <meta property="og:title" content="Các Framework Phổ Biến Trong Java">
+  <meta property="og:description" content="Khám phá các framework phổ biến trong hệ sinh thái Java như Spring, Hibernate và nhiều hơn nữa.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Framework">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/java-new5/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sang Nguyễn
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/java-new5/">
+              Các Framework Phổ Biến Trong Java
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-12-26T00:00:00Z">
+                December 26, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/java/">Java</a>
+      <span class="separator">•</span>
+    <a href="/categories/c%C3%B4ng-c%E1%BB%A5/">Công Cụ</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/framework/">Framework</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="các-framework-phổ-biến-trong-java">
+  <strong>Các Framework Phổ Biến Trong Java</strong>
+  <a class="heading-link" href="#c%c3%a1c-framework-ph%e1%bb%95-bi%e1%ba%bfn-trong-java">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Framework là một phần không thể thiếu trong lập trình Java hiện đại, giúp tăng tốc phát triển phần mềm và giảm tải công việc lặp đi lặp lại. Dưới đây là các framework phổ biến trong hệ sinh thái Java:</p>
+<hr>
+<h2 id="1-spring-framework">
+  <strong>1. Spring Framework</strong>
+  <a class="heading-link" href="#1-spring-framework">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu">
+  <strong>Giới thiệu</strong>
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Spring là một framework mạnh mẽ và linh hoạt cho phát triển ứng dụng Java.</p>
+<h3 id="tính-năng-chính">
+  <strong>Tính năng chính</strong>
+  <a class="heading-link" href="#t%c3%adnh-n%c4%83ng-ch%c3%adnh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Quản lý Bean và Dependency Injection (DI).</li>
+<li>Hỗ trợ phát triển web với Spring MVC.</li>
+<li>Tích hợp tốt với các cơ sở dữ liệu qua Spring Data.</li>
+<li>Hỗ trợ API REST và SOAP.</li>
+</ul>
+<h3 id="ưu-điểm">
+  <strong>Ưu điểm</strong>
+  <a class="heading-link" href="#%c6%b0u-%c4%91i%e1%bb%83m">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Hỗ trợ cộng đồng lớn, tài liệu phong phú.</li>
+<li>Linh hoạt, có thể sử dụng các module riêng lẻ.</li>
+<li>Tích hợp tốt với các công nghệ khác.</li>
+</ul>
+<h3 id="nhược-điểm">
+  <strong>Nhược điểm</strong>
+  <a class="heading-link" href="#nh%c6%b0%e1%bb%a3c-%c4%91i%e1%bb%83m">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Đường cong học tập khá cao với người mới.</li>
+<li>Yêu cầu cấu hình ban đầu khá phức tạp nếu không dùng Spring Boot.</li>
+</ul>
+<h3 id="ví-dụ">
+  <strong>Ví dụ</strong>
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@RestController</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@GetMapping</span><span class="p">(</span><span class="s">&#34;/hello&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">sayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;Hello, Spring!&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="2-spring-boot">
+  <strong>2. Spring Boot</strong>
+  <a class="heading-link" href="#2-spring-boot">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-1">
+  <strong>Giới thiệu</strong>
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Spring Boot là một phần mở rộng của Spring Framework, được thiết kế để đơn giản hóa quá trình phát triển ứng dụng.</p>
+<h3 id="tính-năng-chính-1">
+  <strong>Tính năng chính</strong>
+  <a class="heading-link" href="#t%c3%adnh-n%c4%83ng-ch%c3%adnh-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Cấu hình tự động.</li>
+<li>Tích hợp server nhúng như Tomcat, Jetty.</li>
+<li>Tạo ứng dụng chỉ với một file chạy (JAR).</li>
+</ul>
+<h3 id="ưu-điểm-1">
+  <strong>Ưu điểm</strong>
+  <a class="heading-link" href="#%c6%b0u-%c4%91i%e1%bb%83m-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Nhanh chóng và dễ dàng bắt đầu.</li>
+<li>Giảm thiểu cấu hình.</li>
+<li>Hỗ trợ tốt cho microservices.</li>
+</ul>
+<h3 id="nhược-điểm-1">
+  <strong>Nhược điểm</strong>
+  <a class="heading-link" href="#nh%c6%b0%e1%bb%a3c-%c4%91i%e1%bb%83m-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tốn tài nguyên hơn so với cấu hình thủ công.</li>
+<li>Một số chức năng không cần thiết có thể gây lãng phí.</li>
+</ul>
+<hr>
+<h2 id="3-hibernate">
+  <strong>3. Hibernate</strong>
+  <a class="heading-link" href="#3-hibernate">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-2">
+  <strong>Giới thiệu</strong>
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Hibernate là framework ORM (Object-Relational Mapping) phổ biến trong Java, giúp ánh xạ dữ liệu từ cơ sở dữ liệu sang các đối tượng Java.</p>
+<h3 id="tính-năng-chính-2">
+  <strong>Tính năng chính</strong>
+  <a class="heading-link" href="#t%c3%adnh-n%c4%83ng-ch%c3%adnh-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tự động ánh xạ giữa bảng và đối tượng.</li>
+<li>Hỗ trợ HQL (Hibernate Query Language).</li>
+<li>Tích hợp tốt với Spring.</li>
+</ul>
+<h3 id="ưu-điểm-2">
+  <strong>Ưu điểm</strong>
+  <a class="heading-link" href="#%c6%b0u-%c4%91i%e1%bb%83m-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tiết kiệm thời gian xử lý cơ sở dữ liệu.</li>
+<li>Tương thích với nhiều hệ quản trị cơ sở dữ liệu.</li>
+</ul>
+<h3 id="nhược-điểm-2">
+  <strong>Nhược điểm</strong>
+  <a class="heading-link" href="#nh%c6%b0%e1%bb%a3c-%c4%91i%e1%bb%83m-2">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Khó debug với các truy vấn phức tạp.</li>
+<li>Đường cong học tập cao.</li>
+</ul>
+<h3 id="ví-dụ-1">
+  <strong>Ví dụ</strong>
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Entity</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Id</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Getters và Setters</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="4-apache-struts">
+  <strong>4. Apache Struts</strong>
+  <a class="heading-link" href="#4-apache-struts">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-3">
+  <strong>Giới thiệu</strong>
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Struts là một framework MVC cho phát triển ứng dụng web trong Java.</p>
+<h3 id="tính-năng-chính-3">
+  <strong>Tính năng chính</strong>
+  <a class="heading-link" href="#t%c3%adnh-n%c4%83ng-ch%c3%adnh-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tách riêng mô hình (Model), giao diện (View), và điều khiển (Controller).</li>
+<li>Hỗ trợ nhiều plugin và tích hợp tốt với các công nghệ khác.</li>
+</ul>
+<h3 id="ưu-điểm-3">
+  <strong>Ưu điểm</strong>
+  <a class="heading-link" href="#%c6%b0u-%c4%91i%e1%bb%83m-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tốt cho các ứng dụng lớn.</li>
+<li>Cộng đồng hỗ trợ lâu đời.</li>
+</ul>
+<h3 id="nhược-điểm-3">
+  <strong>Nhược điểm</strong>
+  <a class="heading-link" href="#nh%c6%b0%e1%bb%a3c-%c4%91i%e1%bb%83m-3">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Cấu hình phức tạp hơn so với Spring MVC.</li>
+<li>Không còn được ưu tiên trong các dự án mới.</li>
+</ul>
+<hr>
+<h2 id="5-javaserver-faces-jsf">
+  <strong>5. JavaServer Faces (JSF)</strong>
+  <a class="heading-link" href="#5-javaserver-faces-jsf">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-4">
+  <strong>Giới thiệu</strong>
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>JSF là framework chuẩn của Java EE cho phát triển giao diện người dùng (UI).</p>
+<h3 id="tính-năng-chính-4">
+  <strong>Tính năng chính</strong>
+  <a class="heading-link" href="#t%c3%adnh-n%c4%83ng-ch%c3%adnh-4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Hỗ trợ phát triển UI dựa trên component.</li>
+<li>Tích hợp tốt với các công cụ khác trong Java EE.</li>
+</ul>
+<h3 id="ưu-điểm-4">
+  <strong>Ưu điểm</strong>
+  <a class="heading-link" href="#%c6%b0u-%c4%91i%e1%bb%83m-4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tiêu chuẩn hóa trong Java EE.</li>
+<li>Hỗ trợ nhiều công cụ phát triển.</li>
+</ul>
+<h3 id="nhược-điểm-4">
+  <strong>Nhược điểm</strong>
+  <a class="heading-link" href="#nh%c6%b0%e1%bb%a3c-%c4%91i%e1%bb%83m-4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Khó tùy chỉnh giao diện.</li>
+<li>Hiệu suất kém trên các ứng dụng lớn.</li>
+</ul>
+<hr>
+<h2 id="6-vaadin">
+  <strong>6. Vaadin</strong>
+  <a class="heading-link" href="#6-vaadin">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="giới-thiệu-5">
+  <strong>Giới thiệu</strong>
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Vaadin là framework giúp xây dựng giao diện người dùng (UI) hiện đại.</p>
+<h3 id="tính-năng-chính-5">
+  <strong>Tính năng chính</strong>
+  <a class="heading-link" href="#t%c3%adnh-n%c4%83ng-ch%c3%adnh-5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Tích hợp chặt chẽ với Java.</li>
+<li>Xây dựng UI dựa trên component.</li>
+<li>Không cần viết mã JavaScript.</li>
+</ul>
+<h3 id="ưu-điểm-5">
+  <strong>Ưu điểm</strong>
+  <a class="heading-link" href="#%c6%b0u-%c4%91i%e1%bb%83m-5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Dễ sử dụng, tập trung vào Java.</li>
+<li>Hỗ trợ giao diện hiện đại.</li>
+</ul>
+<h3 id="nhược-điểm-5">
+  <strong>Nhược điểm</strong>
+  <a class="heading-link" href="#nh%c6%b0%e1%bb%a3c-%c4%91i%e1%bb%83m-5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Hạn chế tùy chỉnh so với các framework front-end.</li>
+<li>Không phù hợp cho các ứng dụng đòi hỏi hiệu năng cao.</li>
+</ul>
+<hr>
+<h2 id="kết-luận">
+  <strong>Kết luận</strong>
+  <a class="heading-link" href="#k%e1%ba%bft-lu%e1%ba%adn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Mỗi framework trong Java đều có ưu và nhược điểm riêng, phù hợp với từng nhu cầu cụ thể. Lựa chọn đúng framework sẽ giúp bạn tăng hiệu quả và chất lượng của dự án.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Sang Nguyễn 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

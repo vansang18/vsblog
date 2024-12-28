@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Các Kiểu Dữ Liệu Và Biến Trong Java: Giải Thích Cách Sử Dụng Kiểu Dữ Liệu Nguyên Thủy Và Tham Chiếu · Sang Nguyễn
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sang Nguyễn">
+<meta name="description" content="Tìm hiểu các kiểu dữ liệu và biến trong Java, bao gồm kiểu dữ liệu nguyên thủy và tham chiếu, cùng cách sử dụng chúng.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Các Kiểu Dữ Liệu Và Biến Trong Java: Giải Thích Cách Sử Dụng Kiểu Dữ Liệu Nguyên Thủy Và Tham Chiếu">
+  <meta name="twitter:description" content="Tìm hiểu các kiểu dữ liệu và biến trong Java, bao gồm kiểu dữ liệu nguyên thủy và tham chiếu, cùng cách sử dụng chúng.">
+
+<meta property="og:url" content="http://localhost:1313/posts/java-new4/">
+  <meta property="og:site_name" content="Sang Nguyễn">
+  <meta property="og:title" content="Các Kiểu Dữ Liệu Và Biến Trong Java: Giải Thích Cách Sử Dụng Kiểu Dữ Liệu Nguyên Thủy Và Tham Chiếu">
+  <meta property="og:description" content="Tìm hiểu các kiểu dữ liệu và biến trong Java, bao gồm kiểu dữ liệu nguyên thủy và tham chiếu, cùng cách sử dụng chúng.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Lập Trình">
+    <meta property="article:tag" content="Kiểu Dữ Liệu">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/java-new4/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sang Nguyễn
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/java-new4/">
+              Các Kiểu Dữ Liệu Và Biến Trong Java: Giải Thích Cách Sử Dụng Kiểu Dữ Liệu Nguyên Thủy Và Tham Chiếu
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-12-26T00:00:00Z">
+                December 26, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/java/">Java</a>
+      <span class="separator">•</span>
+    <a href="/categories/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn/">Hướng Dẫn</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/l%E1%BA%ADp-tr%C3%ACnh/">Lập Trình</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ki%E1%BB%83u-d%E1%BB%AF-li%E1%BB%87u/">Kiểu Dữ Liệu</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="các-kiểu-dữ-liệu-và-biến-trong-java">
+  <strong>Các Kiểu Dữ Liệu Và Biến Trong Java</strong>
+  <a class="heading-link" href="#c%c3%a1c-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u-v%c3%a0-bi%e1%ba%bfn-trong-java">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Java cung cấp nhiều kiểu dữ liệu và cách khai báo biến linh hoạt, giúp lập trình viên dễ dàng quản lý và xử lý dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu về các kiểu dữ liệu nguyên thủy và tham chiếu trong Java.</p>
+<hr>
+<h2 id="1-kiểu-dữ-liệu-nguyên-thủy-primitive-types">
+  <strong>1. Kiểu dữ liệu nguyên thủy (Primitive Types)</strong>
+  <a class="heading-link" href="#1-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u-nguy%c3%aan-th%e1%bb%a7y-primitive-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="danh-sách-các-kiểu-dữ-liệu-nguyên-thủy">
+  <strong>Danh sách các kiểu dữ liệu nguyên thủy</strong>
+  <a class="heading-link" href="#danh-s%c3%a1ch-c%c3%a1c-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u-nguy%c3%aan-th%e1%bb%a7y">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Kiểu dữ liệu</th>
+          <th>Kích thước</th>
+          <th>Giá trị mặc định</th>
+          <th>Phạm vi giá trị</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>byte</code></td>
+          <td>8-bit</td>
+          <td>0</td>
+          <td>-128 đến 127</td>
+      </tr>
+      <tr>
+          <td><code>short</code></td>
+          <td>16-bit</td>
+          <td>0</td>
+          <td>-32,768 đến 32,767</td>
+      </tr>
+      <tr>
+          <td><code>int</code></td>
+          <td>32-bit</td>
+          <td>0</td>
+          <td>-2<!-- raw HTML omitted -->31<!-- raw HTML omitted --> đến 2<!-- raw HTML omitted -->31<!-- raw HTML omitted -->-1</td>
+      </tr>
+      <tr>
+          <td><code>long</code></td>
+          <td>64-bit</td>
+          <td>0L</td>
+          <td>-2<!-- raw HTML omitted -->63<!-- raw HTML omitted --> đến 2<!-- raw HTML omitted -->63<!-- raw HTML omitted -->-1</td>
+      </tr>
+      <tr>
+          <td><code>float</code></td>
+          <td>32-bit</td>
+          <td>0.0f</td>
+          <td>Giá trị số thực với độ chính xác 6-7 chữ số</td>
+      </tr>
+      <tr>
+          <td><code>double</code></td>
+          <td>64-bit</td>
+          <td>0.0d</td>
+          <td>Giá trị số thực với độ chính xác 15-16 chữ số</td>
+      </tr>
+      <tr>
+          <td><code>char</code></td>
+          <td>16-bit</td>
+          <td>&lsquo;\u0000&rsquo;</td>
+          <td>Một ký tự Unicode</td>
+      </tr>
+      <tr>
+          <td><code>boolean</code></td>
+          <td>1-bit</td>
+          <td><code>false</code></td>
+          <td><code>true</code> hoặc <code>false</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3 id="ví-dụ">
+  <strong>Ví dụ</strong>
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PrimitiveExample</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">25</span><span class="p">;</span><span class="w">             </span><span class="c1">// Số nguyên</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">float</span><span class="w"> </span><span class="n">price</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">19</span><span class="p">.</span><span class="na">99f</span><span class="p">;</span><span class="w">     </span><span class="c1">// Số thực</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span><span class="w">         </span><span class="c1">// Ký tự</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isJavaFun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// Boolean</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Age: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Price: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">price</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Grade: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">grade</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Is Java fun? &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">isJavaFun</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="2-kiểu-dữ-liệu-tham-chiếu-reference-types">
+  <strong>2. Kiểu dữ liệu tham chiếu (Reference Types)</strong>
+  <a class="heading-link" href="#2-ki%e1%bb%83u-d%e1%bb%af-li%e1%bb%87u-tham-chi%e1%ba%bfu-reference-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Kiểu dữ liệu tham chiếu trong Java bao gồm:</p>
+<ul>
+<li><strong>Chuỗi (String)</strong></li>
+<li><strong>Mảng (Array)</strong></li>
+<li><strong>Lớp (Class)</strong></li>
+<li><strong>Giao diện (Interface)</strong></li>
+</ul>
+<h3 id="chuỗi-string">
+  <strong>Chuỗi (String)</strong>
+  <a class="heading-link" href="#chu%e1%bb%97i-string">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Chuỗi là một đối tượng đặc biệt trong Java.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringExample</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello, Java!&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">toUpperCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// HELLO, JAVA!</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="mảng-array">
+  <strong>Mảng (Array)</strong>
+  <a class="heading-link" href="#m%e1%ba%a3ng-array">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Mảng là một tập hợp các phần tử có cùng kiểu dữ liệu.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArrayExample</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">,</span><span class="w"> </span><span class="n">4</span><span class="p">,</span><span class="w"> </span><span class="n">5</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">numbers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">number</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="lớp-và-đối-tượng">
+  <strong>Lớp và Đối tượng</strong>
+  <a class="heading-link" href="#l%e1%bb%9bp-v%c3%a0-%c4%91%e1%bb%91i-t%c6%b0%e1%bb%a3ng">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Lớp là khuôn mẫu để tạo ra các đối tượng.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">introduce</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Tôi là &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;, &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; tuổi.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&#34;Sang&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">30</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">person</span><span class="p">.</span><span class="na">introduce</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="3-cách-khai-báo-biến">
+  <strong>3. Cách khai báo biến</strong>
+  <a class="heading-link" href="#3-c%c3%a1ch-khai-b%c3%a1o-bi%e1%ba%bfn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="cú-pháp-khai-báo">
+  <strong>Cú pháp khai báo</strong>
+  <a class="heading-link" href="#c%c3%ba-ph%c3%a1p-khai-b%c3%a1o">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">kiểu</span><span class="w"> </span><span class="n">dữ</span><span class="w"> </span><span class="n">liệu</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&lt;</span><span class="n">tên</span><span class="w"> </span><span class="n">biến</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&lt;</span><span class="n">giá</span><span class="w"> </span><span class="n">trị</span><span class="w"> </span><span class="n">ban</span><span class="w"> </span><span class="n">đầu</span><span class="o">&gt;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><p>Ví dụ:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">25</span><span class="p">;</span><span class="w">          </span><span class="c1">// Khai báo biến số nguyên</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Java&#34;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Khai báo chuỗi</span><span class="w">
+</span></span></span></code></pre></div><h3 id="biến-cục-bộ-local-variables">
+  <strong>Biến cục bộ (Local Variables)</strong>
+  <a class="heading-link" href="#bi%e1%ba%bfn-c%e1%bb%a5c-b%e1%bb%99-local-variables">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Biến được khai báo bên trong một phương thức hoặc khối mã.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">display</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">localVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Biến cục bộ</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">localVariable</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="biến-thành-viên-instance-variables">
+  <strong>Biến thành viên (Instance Variables)</strong>
+  <a class="heading-link" href="#bi%e1%ba%bfn-th%c3%a0nh-vi%c3%aan-instance-variables">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Biến được khai báo bên trong lớp nhưng ngoài các phương thức.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">instanceVariable</span><span class="p">;</span><span class="w"> </span><span class="c1">// Biến thành viên</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="biến-tĩnh-static-variables">
+  <strong>Biến tĩnh (Static Variables)</strong>
+  <a class="heading-link" href="#bi%e1%ba%bfn-t%c4%a9nh-static-variables">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Biến được khai báo với từ khóa <code>static</code>, dùng chung cho tất cả các đối tượng của lớp.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Example</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">staticVariable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">100</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="4-sự-khác-biệt-giữa-kiểu-nguyên-thủy-và-tham-chiếu">
+  <strong>4. Sự khác biệt giữa kiểu nguyên thủy và tham chiếu</strong>
+  <a class="heading-link" href="#4-s%e1%bb%b1-kh%c3%a1c-bi%e1%bb%87t-gi%e1%bb%afa-ki%e1%bb%83u-nguy%c3%aan-th%e1%bb%a7y-v%c3%a0-tham-chi%e1%ba%bfu">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Đặc điểm</th>
+          <th>Kiểu nguyên thủy</th>
+          <th>Kiểu tham chiếu</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Lưu trữ giá trị trực tiếp</td>
+          <td>Có</td>
+          <td>Không</td>
+      </tr>
+      <tr>
+          <td>Lưu trữ địa chỉ bộ nhớ</td>
+          <td>Không</td>
+          <td>Có</td>
+      </tr>
+      <tr>
+          <td>Giá trị mặc định</td>
+          <td>Tuỳ thuộc vào kiểu dữ liệu</td>
+          <td><code>null</code></td>
+      </tr>
+      <tr>
+          <td>Ví dụ</td>
+          <td><code>int</code>, <code>float</code></td>
+          <td><code>String</code>, <code>Array</code></td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="kết-luận">
+  <strong>Kết luận</strong>
+  <a class="heading-link" href="#k%e1%ba%bft-lu%e1%ba%adn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Hiểu rõ các kiểu dữ liệu và cách khai báo biến trong Java là bước đầu quan trọng để làm chủ ngôn ngữ này. Hãy thực hành sử dụng chúng trong các dự án của bạn để nắm vững hơn!</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Sang Nguyễn 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

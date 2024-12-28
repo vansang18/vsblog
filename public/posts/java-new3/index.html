@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Cấu Trúc Chương Trình Java: Giới Thiệu Về Lớp, Phương Thức, Và Cách Java Tổ Chức Mã Nguồn · Sang Nguyễn
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sang Nguyễn">
+<meta name="description" content="Tìm hiểu cách Java tổ chức chương trình, từ lớp, phương thức đến cấu trúc mã nguồn.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Cấu Trúc Chương Trình Java: Giới Thiệu Về Lớp, Phương Thức, Và Cách Java Tổ Chức Mã Nguồn">
+  <meta name="twitter:description" content="Tìm hiểu cách Java tổ chức chương trình, từ lớp, phương thức đến cấu trúc mã nguồn.">
+
+<meta property="og:url" content="http://localhost:1313/posts/java-new3/">
+  <meta property="og:site_name" content="Sang Nguyễn">
+  <meta property="og:title" content="Cấu Trúc Chương Trình Java: Giới Thiệu Về Lớp, Phương Thức, Và Cách Java Tổ Chức Mã Nguồn">
+  <meta property="og:description" content="Tìm hiểu cách Java tổ chức chương trình, từ lớp, phương thức đến cấu trúc mã nguồn.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-26T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="article:tag" content="Lập Trình">
+    <meta property="article:tag" content="Người Mới Bắt Đầu">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/java-new3/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sang Nguyễn
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/java-new3/">
+              Cấu Trúc Chương Trình Java: Giới Thiệu Về Lớp, Phương Thức, Và Cách Java Tổ Chức Mã Nguồn
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-12-26T00:00:00Z">
+                December 26, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/java/">Java</a>
+      <span class="separator">•</span>
+    <a href="/categories/h%C6%B0%E1%BB%9Bng-d%E1%BA%ABn/">Hướng Dẫn</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/java/">Java</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/l%E1%BA%ADp-tr%C3%ACnh/">Lập Trình</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ng%C6%B0%E1%BB%9Di-m%E1%BB%9Bi-b%E1%BA%AFt-%C4%91%E1%BA%A7u/">Người Mới Bắt Đầu</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="cấu-trúc-chương-trình-java-giới-thiệu-về-lớp-phương-thức-và-tổ-chức-mã-nguồn">
+  <strong>Cấu trúc Chương trình Java: Giới thiệu về Lớp, Phương thức và Tổ chức Mã nguồn</strong>
+  <a class="heading-link" href="#c%e1%ba%a5u-tr%c3%bac-ch%c6%b0%c6%a1ng-tr%c3%acnh-java-gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-l%e1%bb%9bp-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-v%c3%a0-t%e1%bb%95-ch%e1%bb%a9c-m%c3%a3-ngu%e1%bb%93n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Java là một ngôn ngữ lập trình hướng đối tượng, nổi bật với cấu trúc mã nguồn rõ ràng và dễ tổ chức. Hiểu rõ cách Java tổ chức chương trình sẽ giúp bạn viết mã dễ hiểu, dễ bảo trì, và chuẩn mực hơn.</p>
+<hr>
+<h2 id="1-cấu-trúc-cơ-bản-của-một-chương-trình-java">
+  <strong>1. Cấu trúc cơ bản của một chương trình Java</strong>
+  <a class="heading-link" href="#1-c%e1%ba%a5u-tr%c3%bac-c%c6%a1-b%e1%ba%a3n-c%e1%bb%a7a-m%e1%bb%99t-ch%c6%b0%c6%a1ng-tr%c3%acnh-java">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Một chương trình Java điển hình bao gồm:</p>
+<ol>
+<li><strong>Gói (Package)</strong>: Dùng để nhóm các lớp liên quan.</li>
+<li><strong>Lớp (Class)</strong>: Thành phần cơ bản nhất chứa các thuộc tính (fields) và phương thức (methods).</li>
+<li><strong>Phương thức (Method)</strong>: Các chức năng hoặc hành động mà lớp có thể thực hiện.</li>
+<li><strong>Hàm <code>main</code></strong>: Điểm bắt đầu của mọi chương trình Java.</li>
+</ol>
+<h3 id="ví-dụ-cơ-bản">
+  <strong>Ví dụ cơ bản</strong>
+  <a class="heading-link" href="#v%c3%ad-d%e1%bb%a5-c%c6%a1-b%e1%ba%a3n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 1. Khai báo gói</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 2. Khai báo lớp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloWorld</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 3. Phương thức main - Điểm bắt đầu của chương trình</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Hello, World!&#34;</span><span class="p">);</span><span class="w"> </span><span class="c1">// In ra màn hình</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><hr>
+<h2 id="2-gói-package">
+  <strong>2. Gói (Package)</strong>
+  <a class="heading-link" href="#2-g%c3%b3i-package">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Gói</strong> được sử dụng để tổ chức các lớp và giao diện, giúp mã nguồn gọn gàng hơn.</p>
+<ul>
+<li>Gói mặc định: Nếu không khai báo, các lớp sẽ thuộc gói mặc định.</li>
+<li>Cách sử dụng:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.utils</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div></li>
+</ul>
+<h3 id="lợi-ích-của-gói">
+  <strong>Lợi ích của gói</strong>
+  <a class="heading-link" href="#l%e1%bb%a3i-%c3%adch-c%e1%bb%a7a-g%c3%b3i">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Nhóm các lớp liên quan để dễ quản lý.</li>
+<li>Tránh xung đột tên lớp trong các dự án lớn.</li>
+</ul>
+<hr>
+<h2 id="3-lớp-class">
+  <strong>3. Lớp (Class)</strong>
+  <a class="heading-link" href="#3-l%e1%bb%9bp-class">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Lớp</strong> là đơn vị cơ bản trong lập trình Java. Nó mô tả các thuộc tính (dữ liệu) và hành vi (phương thức) của đối tượng.</p>
+<h3 id="cấu-trúc-một-lớp">
+  <strong>Cấu trúc một lớp</strong>
+  <a class="heading-link" href="#c%e1%ba%a5u-tr%c3%bac-m%e1%bb%99t-l%e1%bb%9bp">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Thuộc tính (fields)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Constructor (Hàm khởi tạo)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Phương thức</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">introduce</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Tôi tên là &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;, &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; tuổi.&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="giải-thích">
+  <strong>Giải thích</strong>
+  <a class="heading-link" href="#gi%e1%ba%a3i-th%c3%adch">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong>Thuộc tính (Fields)</strong>: Biến lưu trữ thông tin của đối tượng.</li>
+<li><strong>Constructor</strong>: Hàm khởi tạo được gọi khi đối tượng được tạo.</li>
+<li><strong>Phương thức (Methods)</strong>: Hành vi hoặc chức năng của đối tượng.</li>
+</ul>
+<hr>
+<h2 id="4-phương-thức-method">
+  <strong>4. Phương thức (Method)</strong>
+  <a class="heading-link" href="#4-ph%c6%b0%c6%a1ng-th%e1%bb%a9c-method">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Phương thức</strong> là các khối mã thực hiện một chức năng cụ thể.<br>
+Chúng có thể nhận tham số và trả về giá trị.</p>
+<h3 id="cấu-trúc-một-phương-thức">
+  <strong>Cấu trúc một phương thức</strong>
+  <a class="heading-link" href="#c%e1%ba%a5u-tr%c3%bac-m%e1%bb%99t-ph%c6%b0%c6%a1ng-th%e1%bb%a9c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// Trả về tổng của a và b</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="loại-phương-thức">
+  <strong>Loại phương thức</strong>
+  <a class="heading-link" href="#lo%e1%ba%a1i-ph%c6%b0%c6%a1ng-th%e1%bb%a9c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li><strong>Phương thức tĩnh (Static)</strong>: Gọi trực tiếp từ lớp, không cần tạo đối tượng.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">greet</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Xin chào!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div></li>
+<li><strong>Phương thức không tĩnh</strong>: Gọi từ một đối tượng.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Hello từ đối tượng!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="5-hàm-main">
+  <strong>5. Hàm <code>main</code></strong>
+  <a class="heading-link" href="#5-h%c3%a0m-main">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Hàm <code>main</code> là điểm bắt đầu thực thi của mọi chương trình Java.<br>
+Cấu trúc:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// Code sẽ được thực thi từ đây</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Chương trình Java của tôi!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><h3 id="giải-thích-1">
+  <strong>Giải thích</strong>
+  <a class="heading-link" href="#gi%e1%ba%a3i-th%c3%adch-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li><strong><code>public</code></strong>: Cho phép JVM truy cập từ bất kỳ đâu.</li>
+<li><strong><code>static</code></strong>: Không cần tạo đối tượng để gọi.</li>
+<li><strong><code>void</code></strong>: Không trả về giá trị.</li>
+<li><strong><code>String[] args</code></strong>: Tham số dòng lệnh (nếu có).</li>
+</ul>
+<hr>
+<h2 id="6-tổ-chức-mã-nguồn">
+  <strong>6. Tổ chức mã nguồn</strong>
+  <a class="heading-link" href="#6-t%e1%bb%95-ch%e1%bb%a9c-m%c3%a3-ngu%e1%bb%93n">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="cấu-trúc-thư-mục">
+  <strong>Cấu trúc thư mục</strong>
+  <a class="heading-link" href="#c%e1%ba%a5u-tr%c3%bac-th%c6%b0-m%e1%bb%a5c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Java thường tổ chức mã nguồn theo cấu trúc chuẩn:</p>
+<pre tabindex="0"><code>src/
+  └── main/
+      ├── java/
+      │   └── com/
+      │       └── example/
+      │           └── HelloWorld.java
+      └── resources/
+</code></pre><ul>
+<li><strong><code>src/main/java</code></strong>: Chứa mã nguồn Java.</li>
+<li><strong><code>src/main/resources</code></strong>: Chứa file cấu hình hoặc tài nguyên.</li>
+</ul>
+<h3 id="cách-biên-dịch-và-chạy-chương-trình">
+  <strong>Cách biên dịch và chạy chương trình</strong>
+  <a class="heading-link" href="#c%c3%a1ch-bi%c3%aan-d%e1%bb%8bch-v%c3%a0-ch%e1%ba%a1y-ch%c6%b0%c6%a1ng-tr%c3%acnh">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li><strong>Biên dịch</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">javac HelloWorld.java
+</span></span></code></pre></div></li>
+<li><strong>Chạy chương trình</strong>:
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">java HelloWorld
+</span></span></code></pre></div></li>
+</ol>
+<hr>
+<h2 id="kết-luận">
+  <strong>Kết luận</strong>
+  <a class="heading-link" href="#k%e1%ba%bft-lu%e1%ba%adn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Cấu trúc chương trình Java được thiết kế logic, giúp dễ tổ chức và quản lý mã nguồn. Việc hiểu rõ lớp, phương thức và cách tổ chức mã nguồn sẽ giúp bạn xây dựng các chương trình từ cơ bản đến phức tạp một cách hiệu quả.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Sang Nguyễn 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

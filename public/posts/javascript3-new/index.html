@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Giới Thiệu Về Node.js · Sang Nguyễn
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sang Nguyễn">
+<meta name="description" content="Tìm hiểu về JavaScript, một ngôn ngữ lập trình quan trọng trong phát triển web hiện đại.">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Giới Thiệu Về Node.js">
+  <meta name="twitter:description" content="Tìm hiểu về JavaScript, một ngôn ngữ lập trình quan trọng trong phát triển web hiện đại.">
+
+<meta property="og:url" content="http://localhost:1313/posts/javascript3-new/">
+  <meta property="og:site_name" content="Sang Nguyễn">
+  <meta property="og:title" content="Giới Thiệu Về Node.js">
+  <meta property="og:description" content="Tìm hiểu về JavaScript, một ngôn ngữ lập trình quan trọng trong phát triển web hiện đại.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-27T00:00:00+00:00">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="Programming">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/javascript3-new/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sang Nguyễn
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+          
+          
+          
+            
+          
+            
+              
+                <li class="navigation-item menu-separator">
+                  <span>|</span>
+                </li>
+                
+              
+              <li class="navigation-item">
+                <a href="/pt-br/">🇧🇷</a>
+              </li>
+            
+          
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/javascript3-new/">
+              Giới Thiệu Về Node.js
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-12-27T00:00:00Z">
+                December 27, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              5-minute read
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/l%E1%BA%ADp-tr%C3%ACnh/">Lập Trình</a>
+      <span class="separator">•</span>
+    <a href="/categories/javascript/">JavaScript</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/javascript/">JavaScript</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/web-development/">Web Development</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/programming/">Programming</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h1 id="giới-thiệu-về-nodejs">
+  Giới Thiệu Về Node.js
+  <a class="heading-link" href="#gi%e1%bb%9bi-thi%e1%bb%87u-v%e1%bb%81-nodejs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Node.js là một môi trường chạy mã JavaScript trên server, cho phép lập trình viên sử dụng JavaScript không chỉ trong trình duyệt mà còn trong backend. Với Node.js, bạn có thể xây dựng các ứng dụng web nhanh chóng, xử lý các yêu cầu HTTP, và kết nối với cơ sở dữ liệu, tất cả bằng JavaScript.</p>
+<hr>
+<h2 id="1-nodejs-là-gì">
+  1. <strong>Node.js là gì?</strong>
+  <a class="heading-link" href="#1-nodejs-l%c3%a0-g%c3%ac">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Node.js là một nền tảng chạy trên V8 JavaScript Engine của Google Chrome. Điều này có nghĩa là Node.js thực thi mã JavaScript nhanh chóng và hiệu quả. Nó giúp bạn xây dựng các ứng dụng mạng với khả năng xử lý nhiều kết nối đồng thời nhờ vào kiến trúc non-blocking (không đồng bộ), giúp xử lý hàng triệu kết nối một cách hiệu quả mà không làm tắc nghẽn hệ thống.</p>
+<hr>
+<h2 id="2-tại-sao-nên-sử-dụng-nodejs">
+  2. <strong>Tại Sao Nên Sử Dụng Node.js?</strong>
+  <a class="heading-link" href="#2-t%e1%ba%a1i-sao-n%c3%aan-s%e1%bb%ad-d%e1%bb%a5ng-nodejs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="a-hiệu-suất-cao">
+  a. <strong>Hiệu Suất Cao</strong>
+  <a class="heading-link" href="#a-hi%e1%bb%87u-su%e1%ba%a5t-cao">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Node.js có khả năng xử lý một lượng lớn các yêu cầu đồng thời nhờ vào mô hình non-blocking và event-driven. Điều này giúp nó rất phù hợp cho các ứng dụng yêu cầu khả năng mở rộng và hiệu suất cao như các dịch vụ thời gian thực, ứng dụng chat, hoặc game trực tuyến.</p>
+<h3 id="b-cộng-đồng-và-hệ-sinh-thái-mạnh-mẽ">
+  b. <strong>Cộng Đồng và Hệ Sinh Thái Mạnh Mẽ</strong>
+  <a class="heading-link" href="#b-c%e1%bb%99ng-%c4%91%e1%bb%93ng-v%c3%a0-h%e1%bb%87-sinh-th%c3%a1i-m%e1%ba%a1nh-m%e1%ba%bd">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Với Node.js, bạn có thể tận dụng được một hệ sinh thái thư viện phong phú thông qua npm (Node Package Manager). Npm là kho lưu trữ mã nguồn mở lớn nhất thế giới với hàng trăm nghìn gói thư viện có sẵn.</p>
+<h3 id="c-javascript-trên-server">
+  c. <strong>JavaScript Trên Server</strong>
+  <a class="heading-link" href="#c-javascript-tr%c3%aan-server">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Node.js cho phép lập trình viên sử dụng cùng một ngôn ngữ (JavaScript) cho cả client và server. Điều này giúp giảm thiểu sự phức tạp trong việc phát triển và duy trì mã nguồn cho cả hai phần.</p>
+<hr>
+<h2 id="3-cài-đặt-nodejs">
+  3. <strong>Cài Đặt Node.js</strong>
+  <a class="heading-link" href="#3-c%c3%a0i-%c4%91%e1%ba%b7t-nodejs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Để bắt đầu sử dụng Node.js, bạn cần tải và cài đặt Node.js từ trang chủ của nó: <a href="https://nodejs.org/"  class="external-link" target="_blank" rel="noopener">https://nodejs.org/</a>.</p>
+<h3 id="cài-đặt-trên-macos-hoặc-linux">
+  Cài Đặt Trên MacOS hoặc Linux:
+  <a class="heading-link" href="#c%c3%a0i-%c4%91%e1%ba%b7t-tr%c3%aan-macos-ho%e1%ba%b7c-linux">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Sử dụng Homebrew trên macOS</span>
+</span></span><span class="line"><span class="cl">brew install node
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Trên Ubuntu (Linux)</span>
+</span></span><span class="line"><span class="cl">sudo apt update
+</span></span><span class="line"><span class="cl">sudo apt install nodejs npm
+</span></span></code></pre></div><h3 id="cài-đặt-trên-windows">
+  Cài Đặt Trên Windows:
+  <a class="heading-link" href="#c%c3%a0i-%c4%91%e1%ba%b7t-tr%c3%aan-windows">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Tải Node.js từ trang chính thức, sau đó làm theo hướng dẫn cài đặt.</p>
+<hr>
+<h2 id="4-hello-world-với-nodejs">
+  4. <strong>Hello World với Node.js</strong>
+  <a class="heading-link" href="#4-hello-world-v%e1%bb%9bi-nodejs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Sau khi cài đặt Node.js, bạn có thể thử một ví dụ đơn giản để bắt đầu. Tạo một file <code>app.js</code> với nội dung sau:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">((</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="s1">&#39;Hello, World!&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Server running at http://localhost:3000/&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><p>Sau đó, mở terminal và chạy:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">node app.js
+</span></span></code></pre></div><p>Mở trình duyệt và truy cập <code>http://localhost:3000/</code>. Bạn sẽ thấy màn hình hiển thị &ldquo;Hello, World!&rdquo;.</p>
+<hr>
+<h2 id="5-các-thư-viện-và-công-cụ-phổ-biến">
+  5. <strong>Các Thư Viện và Công Cụ Phổ Biến</strong>
+  <a class="heading-link" href="#5-c%c3%a1c-th%c6%b0-vi%e1%bb%87n-v%c3%a0-c%c3%b4ng-c%e1%bb%a5-ph%e1%bb%95-bi%e1%ba%bfn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="a-expressjs">
+  a. <strong>Express.js</strong>
+  <a class="heading-link" href="#a-expressjs">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Express.js là một framework web phổ biến cho Node.js, giúp bạn dễ dàng tạo ra các ứng dụng web và API RESTful. Express giúp giảm thiểu lượng mã bạn cần viết để xây dựng các ứng dụng web.</p>
+<p>Cài đặt Express:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install express
+</span></span></code></pre></div><h3 id="b-socketio">
+  b. <strong>Socket.io</strong>
+  <a class="heading-link" href="#b-socketio">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Socket.io giúp xây dựng các ứng dụng thời gian thực như chat trực tuyến bằng cách cung cấp khả năng giao tiếp hai chiều giữa server và client.</p>
+<p>Cài đặt Socket.io:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install socket.io
+</span></span></code></pre></div><h3 id="c-mongoose">
+  c. <strong>Mongoose</strong>
+  <a class="heading-link" href="#c-mongoose">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Mongoose là một thư viện để kết nối và thao tác với MongoDB, cơ sở dữ liệu NoSQL phổ biến, giúp bạn dễ dàng quản lý các mô hình dữ liệu trong ứng dụng.</p>
+<p>Cài đặt Mongoose:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install mongoose
+</span></span></code></pre></div><hr>
+<h2 id="6-quản-lý-thư-viện-với-npm">
+  6. <strong>Quản Lý Thư Viện Với NPM</strong>
+  <a class="heading-link" href="#6-qu%e1%ba%a3n-l%c3%bd-th%c6%b0-vi%e1%bb%87n-v%e1%bb%9bi-npm">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Node.js sử dụng npm (Node Package Manager) để quản lý các thư viện và gói phần mềm. Để khởi tạo một dự án Node.js, bạn cần tạo một file <code>package.json</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm init
+</span></span></code></pre></div><p>Lệnh này sẽ hỏi bạn một số thông tin cơ bản về dự án và tạo ra file <code>package.json</code>. Để cài đặt một thư viện, bạn sử dụng lệnh:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install &lt;package-name&gt;
+</span></span></code></pre></div><p>Ví dụ, để cài đặt Express:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">npm install express
+</span></span></code></pre></div><hr>
+<h2 id="7-nodejs-và-các-ứng-dụng-thời-gian-thực">
+  7. <strong>Node.js và Các Ứng Dụng Thời Gian Thực</strong>
+  <a class="heading-link" href="#7-nodejs-v%c3%a0-c%c3%a1c-%e1%bb%a9ng-d%e1%bb%a5ng-th%e1%bb%9di-gian-th%e1%bb%b1c">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Một trong những lĩnh vực mạnh mẽ nhất của Node.js là xây dựng các ứng dụng thời gian thực. Ví dụ, ứng dụng chat hoặc game trực tuyến thường cần khả năng cập nhật và giao tiếp dữ liệu theo thời gian thực giữa client và server. Node.js với khả năng xử lý nhiều kết nối đồng thời rất phù hợp cho các ứng dụng này.</p>
+<p>Ví dụ đơn giản về chat với Socket.io:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// server.js
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">socketIo</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;socket.io&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="nx">app</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">io</span> <span class="o">=</span> <span class="nx">socketIo</span><span class="p">(</span><span class="nx">server</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">io</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;connection&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">socket</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;A user connected&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">socket</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;disconnect&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;User disconnected&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">server</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Server running at http://localhost:3000/&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><hr>
+<h2 id="8-kết-luận">
+  8. <strong>Kết Luận</strong>
+  <a class="heading-link" href="#8-k%e1%ba%bft-lu%e1%ba%adn">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Node.js là một công cụ mạnh mẽ cho việc phát triển các ứng dụng mạng và thời gian thực. Với hiệu suất cao, khả năng xử lý các kết nối đồng thời và một cộng đồng hỗ trợ lớn, Node.js trở thành một lựa chọn tuyệt vời cho lập trình viên JavaScript. Nếu bạn đã quen thuộc với JavaScript, Node.js sẽ giúp bạn mở rộng khả năng của mình từ frontend lên backend một cách mượt mà và dễ dàng.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+      2019 -
+    
+    2024
+     Sang Nguyễn 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
