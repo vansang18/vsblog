@@ -3,4 +3,5 @@ title = "Contact"
 slug = "contact"
 +++
 
-Follow me, @johndoe.
+email: vansang18022003@gmail.com.
+phone: 0797844656
